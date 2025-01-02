@@ -1,0 +1,78 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: transparent; /* No specific background */
+    position: absolute; /* Makes it overlap the .hero section */
+    width: 100%;
+    z-index: 2; /* Ensures it stays on top of the .hero content */
+}
+
+.logo {
+    /* Add logo styling here */
+}
+
+.authButtons {
+    display: flex;
+    gap: 10px;
+}
+
+
+.signupButton,
+.loginButton {
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s ease; 
+    background: transparent;
+}
+
+.signupButton {
+    border: 2px solid #ffffff; 
+}
+
+.loginButton {
+    border: 2px solid #007BFF; 
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    color: #007BFF;
+    border-color: #007BFF;
+}
+
+.hero {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.backgroundImage{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.heroText {
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 4px #000;
+    transform: translateY(-50px);
+    font-size: 1.4em;
+}
